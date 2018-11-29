@@ -82,36 +82,6 @@ updateAnchorPeers 0 1
 echo "Updating anchor peers for org2..."
 updateAnchorPeers 0 2
 
-## Install chaincode on peer0.org1 and peer0.org2
-echo "Installing chaincode on peer0.org1..."
-installChaincode 0 1
-echo "Install chaincode on peer0.org2..."
-installChaincode 0 2
-
-
-# Query chaincode on peer0.org1
-echo "Querying chaincode on peer0.org1..."
-# chaincodeQuery 0 1 100
-
-# Invoke chaincode on peer0.org1 and peer0.org2
-echo "Sending invoke transaction on peer0.org1 peer0.org2..."
-# chaincodeInvoke 0 1 0 2
-
-## Install chaincode on peer1.org2
-echo "Installing chaincode on peer1.org2..."
-installChaincode 1 2
-
-echo "Installing chaincode on peer1.org2..."
-installChaincode 1 1
-
-# Instantiate chaincode on peer0.org2
-echo "Instantiating chaincode on peer0.org2..."
-instantiateChaincode 0 2
-
-# Query on chaincode on peer1.org2, check if the result is 90
-echo "Querying chaincode on peer1.org2..."
-# chaincodeQuery 1 2 90
-
 echo
 echo "========= All GOOD, BYFN execution completed =========== "
 echo
