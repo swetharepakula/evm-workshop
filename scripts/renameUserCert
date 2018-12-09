@@ -1,0 +1,8 @@
+USER_ID=$1
+ORG_NUMBER=$2
+
+currentFile=fabric-cluster/peerOrganizations/org${ORG_NUMBER}.example.com/users/${USER_ID}@org${ORG_NUMBER}.example.com/msp/signcerts/cert.pem
+
+newFile=fabric-cluster/peerOrganizations/org${ORG_NUMBER}.example.com/users/${USER_ID}@org${ORG_NUMBER}.example.com/msp/signcerts/${USER_ID}@org${ORG_NUMBER}.example.com-cert.pem
+
+mv $currentFile $newFile

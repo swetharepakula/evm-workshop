@@ -1,5 +1,7 @@
+scripts_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+
 # import utils
-. utils.sh
+. $scripts_dir/utils.sh
 
 export CC_SRC_PATH=github.com/hyperledger/fabric-chaincode-evm/evmcc
 export CHANNEL_NAME=mychannel
