@@ -14,18 +14,6 @@ export THIRDPARTY_IMAGE_VERSION=0.4.13
 export ARCH=$(echo "$(uname -s|tr '[:upper:]' '[:lower:]'|sed 's/mingw64_nt.*/windows/')-$(uname -m | sed 's/x86_64/amd64/g')")
 export MARCH=$(uname -m)
 
-# ensure we're in the fabric-samples directory
-dir=`basename $PWD`
-if [ "${dir}" == "scripts" ]; then
-        cd ..
-fi
-
-dir=`basename $PWD`
-if [ "${dir}" != "fabric-samples" ]; then
-	echo "You should run this script from the fabric-samples root directory."
-	exit 1
-fi
-
 printHelp() {
   echo "Usage: bootstrap.sh [<version>] [<ca_version>] [<thirdparty_version>][-d -b]"
   echo
